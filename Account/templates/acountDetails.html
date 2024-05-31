@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Holders</title>
+    <style>
+        .container{
+            width:500px;
+            height: auto;
+            background-color: rgb(134, 251 200);
+            margin-top: 20%;
+            margin-left: 20%;
+        }
+        table{
+            border: blueviolet;
+            border-style: double;
+        }
+        tr td{
+            border-style: double;
+            border-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th>S. No</th>
+                <th>Account Holder</th>
+                <th>Account Number</th>
+                <th>Age</th>
+                <th>Mobile Number</th>
+                <th>Address</th>
+            </tr>
+            {% for ac in ah %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{ac.name}}</td>
+                <td>{{ac.accountNo}}</td>
+                <td>{{ac.age}}</td>
+                <td>{{ac.mobile}}</td>
+                <td>{{ac.adress}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
